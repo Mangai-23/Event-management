@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Organizing Portal</title>
+<style>
+    body, ul {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, sans-serif
+    }
+    #banner {
+        color: #fff;
+        padding: 150px 0;
+        background-image: url("hall1.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .header {
+        color: #fff;
+        padding: 20px;
+    }
+    .header nav{
+        position: absolute;
+        top:26px;
+        right: 100px;
+        float:right;
+        }
+    .header h1{
+        font-size: 32px;
+        position: absolute;
+        top: 12px;
+        left: 30px;
+        float:left;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .header nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+    .header nav ul li a {
+        text-decoration: none;
+        color:#fff;
+        font-family:sans-serif;
+        font-weight:bold;
+        margin:0 10px;
+        line-height:60px;
+        text-transform:uppercase;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+       background-color: #1110109e;
+        min-width: 160px;
+        color:#f3f0f0;
+        box-shadow: 0px 8px 16px 0px rgba(232, 15, 15, 0.176);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      
+    .dropdown:hover .dropdown-content{
+        display: block;
+      }
+    .text
+    {
+        text-align: center;
+    }
+    .text h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    #services {
+        padding: 50px;
+    }   
+    .service {
+        text-align: center;
+        margin-left: 50px;
+    }
+    .service img {
+        width: 200px;
+        height: 200px;
+        border-radius:50%;
+        margin-left: 20px;
+    }
+    footer{
+        background-color: #333;
+        color: #fff;
+        padding: 20 
+    }
+</style>
+</head>
+<body>
+    <section id="banner">     
+        <div class="header">
+        <h1>Event Organizing Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <div class="dropdown">
+                <span><li><a href="#">Events</a></li></span>
+                <div class="dropdown-content">
+                    <p>Wedding</p>
+                    <p>Birthday</p>
+                    <p>Conferences</p>
+                    <p>Musical Concert</p>
+                    <p>Engagement</p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span><li><a href="#">Contact</a></li></span>
+                    <div class="dropdown-content">
+                            <p>EmailID:mangaisuresh2923@gmail.com</p>
+                            <p>Contact:8668070568</p>
+                        </div>
+                    </div>
+                <li><a href="#">About</a></li>
+               
+            </ul>
+        </nav>
+    </div>
+    <div class="text">
+        <h2>Welcome to our Event Organizing Portal</h2>
+        <p>We specialize in creating unforgettable experiences</p>
+        <a href="file:///C:/IWT%20LAB/register.html" class="btn">Explore Events</a>
+    </div>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="hall1.jpeg" alt="Service 1">
+            <h3>Wedding Planning</h3>
+            <p>We offer full-service wedding planning to make your special day truly memorable.</p>
+        </div>
+        <div class="service">
+            <img src="corporate.jpeg" alt="Service 2">
+            <h3>Corporate Events</h3>
+            <p>We plan and execute professional corporate events tailored to your specific needs.</p>
+        </div>
+        <div class="service">
+            <img src="bday.jpeg" alt="Service 3">
+            <h3>Birthday Parties</h3>
+            <p>Let us handle the planning and coordination of your next birthday celebration.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Event Organizing Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
