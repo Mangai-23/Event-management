@@ -8,53 +8,58 @@
     <style>
         body{
             font-family: Arial;
-            width: 100%;
+            padding: 90px 0;
             text-align: center;
-            background-color: #ddd;
+            background-image:url("border.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position:top;
         }   
 
         table {
             border-collapse: collapse;
             align-items: center;
-            margin-left: 500px;
-            margin-top: 50px;
+            margin-left: 350px;
+            margin-top: 40px;
+            border:2px solid #fff;
+          background-color: #f98acb;
         }
 
         td {
-            border: 1px solid black;
+            border: 2px solid #fff;
             padding: 5px;
         }
 
         th {
-            border: 1px solid black;
+            border: 2px solid #fff;
             padding: 5px;
-            text-align: left;
+            text-align:center;
         }
 
         .nav {
             overflow: hidden;
-            background-color: #ff0066;
+           /* background-color: #ff0066;*/
             text-align: center;
             padding-bottom: 10px;
             padding-top: 10px;
             margin-bottom: 10px;
-            margin-top: 10px;
+           margin-top: 10px;
         }
 
         h2 {
+            font-family:"Brush Script MT", cursive; font-size: 45px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 26.4px;
             text-align: center;
-            margin-left: 100px;
+            margin-left: 350px;
             font-weight: bold;
         }
         
         input[type="text"] {
             width: 22%;
             border: none;
-            border-bottom: .5px solid #000;
+            border-bottom:.5px solid #000;
             outline: none;
             height: 20px;
-            color: #000;
-            background-color: #ccc;
+            color:#000;
             font-size: 15px;
         }
 
@@ -65,8 +70,70 @@
 
         p{
             font-weight: bold;
-            font-size: 30px;
+            font-size: 30px;/
         }
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .filter-label {
+            font-size: 22px;
+            font-weight: bold;
+            margin-right: 10px;
+            color: #ff0066;
+        }
+        .filter-input {
+            width: 400px;
+            border: 15px;
+            border-radius: 10px;
+            outline:auto;
+            height: 35px;
+            color: #141313;
+            font-size: 18px;
+            padding-left:0px;
+            transition: border-color 0.3s ease-in-out;
+        }
+        .filter-input:focus {
+            border-color: #ff0066;
+        }
+        .search-button {
+            background-color: #ff0066;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .search-button:hover {
+            background-color: #e6005c;
+        }
+
+        /* Beautiful animated search icon */
+        .search-icon-container {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 12px;
+            right: 8px;
+            opacity: 0.6;
+            pointer-events: none;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+       /* .filter-input:focus + .search-icon-container .search-icon,
+        .filter-input:not(:placeholder-shown) + .search-icon-container .search-icon {
+            opacity: 1;
+            transform: translateY(-2px) scale(1.1);
+        }*/
+
     </style>
 </head>
 <body ng-app="myModule">
@@ -74,9 +141,11 @@
         <h2>Wedding Planner - Event Organizing Portal</h2>
     </div>
     <div ng-controller="myController">
-        <span>Search by Design : </span><input type="text" ng-model="searchDesign" placeholder="Search by design" />
-        <br />
-        <br />
+        <div class="filter-container">
+            <span><label class="filter-label">Find Your Dream Design:</label></span>
+                <input type="text" ng-model="searchDesign" class="filter-input" placeholder="Search by design" style="background-color:rgba(234, 255, 0, 0.759)"/>
+            <button class="search-button" ng-click="search()">Search</button>
+        </div>
         <p>Wedding Decorations & Venues</p>
         <table>
             <thead>
@@ -97,7 +166,6 @@
             </tbody>
         </table>
     </div>
-
     <script>
         var app = angular
             .module("myModule", [])
